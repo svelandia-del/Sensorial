@@ -1,0 +1,57 @@
+{
+  "expo": {
+    "name": "SensoricaApp",
+    "slug": "sensorica-app",
+    "version": "1.1.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#07111F"
+    },
+    "android": {
+      "package": "com.santiagovelandia.sensoricaapp",
+      "permissions": [
+        "CAMERA",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "READ_MEDIA_IMAGES",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "SensoricaApp necesita la cámara para tomar fotografías.",
+        "NSLocationWhenInUseUsageDescription": "SensoricaApp necesita la ubicación para mostrarla en el mapa.",
+        "NSPhotoLibraryAddUsageDescription": "SensoricaApp necesita guardar fotografías en la galería."
+      }
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Permite a SensoricaApp tomar fotografías."
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "Permite a SensoricaApp consultar tu ubicación."
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Permite a SensoricaApp acceder a tus fotografías.",
+          "savePhotosPermission": "Permite a SensoricaApp guardar fotografías."
+        }
+      ],
+      "expo-sharing",
+      "react-native-maps"
+    ]
+  }
+}
